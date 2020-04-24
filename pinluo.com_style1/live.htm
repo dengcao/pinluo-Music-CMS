@@ -1,0 +1,562 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META http-equiv=Content-Type content="text/html; charset=gb2312">
+<SCRIPT language=JavaScript>
+<!-- Hide
+function killErrors() {
+return true;
+}
+window.onerror = killErrors;
+//容错
+// -->
+</SCRIPT>
+
+<SCRIPT language=JavaScript>
+<!--
+var srcc = window.location;
+srcc = srcc.toString()
+start = srcc.indexOf("?");
+end = srcc.length;
+if (start==-1){
+srcc = "mms://210.77.193.6/music1"
+}
+
+if (start!=-1){
+srcc = srcc.substring(start+1,end);
+}
+
+//alert(srcc)
+
+
+
+ day=17;
+ month=5;
+ year=2002;
+ hour=18;
+    if ( navigator.appName == "Netscape" )
+    {
+        navigator.plugins.refresh();
+        document.write("\x3C" + "applet MAYSCRIPT Code=NPDS.npDSEvtObsProxy.class")
+        document.writeln(" width=352 height=288 name=appObs\x3E \x3C/applet\x3E")
+    }
+var Player;
+var isplaying;
+var movelen;
+var history;
+var ispause;
+var isstop;
+history=false;
+movelen=0;
+isstop=true;
+isplaying=false;
+ispause=false;
+mute=false;
+Player="document.NSPlay";
+var playfile='';
+function preload(imgname,imgsrc)
+{
+	eval(imgname+'=new Image()')
+	eval(imgname+'.src="images\/'+imgsrc+'"')
+}
+preload("play1","play.gif")
+preload("play2","play_b.gif")
+preload("stop1","stop.gif");
+preload("stop2","stop_b.gif");
+preload("sound1","sound.gif");
+preload("sound2","sound_b.gif");
+preload("volume","volume.gif");
+preload("pause1","pause.gif");
+preload("pause2","pause_b.gif");
+preload("full1","full.gif");
+preload("full2","full_b.gif");
+
+function playy(src,a){
+ document.getElementById("st").innerHTML="<p style='color:#FF3300'>直播中</p>"
+ switch (a)
+ {
+   case 1:
+   document.getElementById("item").innerHTML="您现在收听的是 济南故事广播"
+   break  
+   case 2:
+   document.getElementById("item").innerHTML="您现在收听的是 济南文艺广播"
+   break  
+   case 3:
+   document.getElementById("item").innerHTML="您现在收听的是 济南交通广播"
+   break  
+   case 4:
+   document.getElementById("item").innerHTML="您现在收听的是 济南新闻广播"
+   break  
+   case 5:
+   document.getElementById("item").innerHTML="您现在收听的是 济南经济广播"
+   break  
+   case 6:
+   document.getElementById("item").innerHTML="您现在收听的是 Music 88.7"  
+   break  
+ }
+ 
+var abc;
+abc = src + "";
+playhistory(abc);
+}
+function doPlay(){
+//alert("0");
+  document.getElementById("st").innerHTML="<p style='color:#FF3300'>直播中</p>"
+  if(!isplaying){
+    	if (eval(Player).url=='') SetSource(srcc);
+		eval(Player).controls.Play();
+		isplaying=true;  
+    		ispause = false;
+    		isstop=false;		
+	//alert("1");
+	if (eval(Player).url!=filename)
+		if(!ispause){	  
+			movelen=0;
+		}
+
+    		//document.play.src=play2.src;
+    		//document.stop.src=stop1.src;
+    		//document.pause.src=pause1.src;
+
+  }
+  //alert("11111");
+}    
+
+
+function DoStop()
+{
+document.getElementById("st").innerHTML="<p style='color:#666633'>停止</p>"
+  if(isplaying){
+	//eval(Player).CurrentPosition=0;
+	eval(Player).controls.stop();
+	isstop=true;
+    	isplaying=false;
+    	ispause=false;
+	//document.play.src=play1.src;
+    	//document.stop.src=stop2.src;
+    	//document.pause.src=pause1.src;
+    //if (document.seek.style.visibility=="visible")
+     // document.seek.style.left=136;
+
+   } 
+}
+
+
+function DoPause()
+{
+document.getElementById("st").innerHTML="<p style='color:#666633'>暂停中</p>"
+if(isplaying){
+   eval(Player).controls.Pause();
+   isplaying = false
+   ispause = true
+   isstop=false;
+	//document.play.src=play1.src;
+    //document.pause.src=pause2.src;
+    //document.stop.src=stop1.src;
+}
+}
+
+
+function SetPosition(Pos)
+{
+	if (!isplaying) return;
+	eval(Player).CurrentPosition=+Pos;
+}
+
+function SetVolume(Pos)
+{
+eval(Player).volume=Pos;
+}
+
+function SetMute()
+{
+	if (!isplaying) return
+	
+	if (mute){
+		eval(Player).Mute=false
+	    //document.sound.src=sound1.src;	    
+	    //document.vol.style.visibility="visible";
+	    mute=false	
+	}	
+	else{
+	  eval(Player).Mute=true;
+	  //document.sound.src=sound2.src;
+	  //document.vol.style.visibility="hidden";
+	  mute=true
+	}  
+}
+function GetLength()
+{
+	return eval(Player).Duration;
+}
+function GetPosition()
+{
+	tt=eval(Player).CurrentPosition
+	return tt;
+}
+function SetSource(srcname)
+{
+	if (srcname==filename){
+	  history=false;
+	  //eval(Player).AutoRewind=true;
+	  //document.seek.style.visibility="hidden";
+	 } 
+	 else{
+	  //document.seek.style.visibility="visible"; 
+	  //eval(Player).AutoRewind=false;
+	  history=true
+	 } 
+	eval(Player).url=srcname;
+	//document.play.src=play2.src;
+    //document.stop.src=stop1.src;
+	eval(Player).controls.Play();
+	isplaying=true;
+	ispause=false;
+	isstop=false;
+}
+function SetWH(widthpx,heightpx)
+{
+	eval(Player).width=widthpx
+	eval(Player).height=heightpx
+}
+function SetDisplaySize(setting)
+{
+	if (isplaying)
+  	  eval(Player).DisplaySize=setting
+	//全屏 setting=3
+	//100% setting=0
+	// 50% setting=1
+	//200% setting=2 
+}
+            
+
+
+var x,theImg;
+
+var Maxvol, Minvol
+
+
+Maxvol=491;
+Minvol=441;
+cur=541;
+function move(){
+  if (event.button==1&&isplaying){
+
+    left=temp1+event.clientX-x
+      
+    if ((left<=Maxvol)&&(left>=Minvol))
+      theImg.style.pixelLeft=left
+     else 
+       if(left>Maxvol) 
+         theImg.style.pixelLeft=Maxvol
+         else
+           theImg.style.pixelLeft=Minvol 
+   // document.form1.pos.value=theImg.style.pixelLeft
+  return false
+  }
+}
+function enddrag(){
+  
+ //这里设置音量
+ if (isplaying){
+   cur=theImg.style.pixelLeft;
+   cur=Math.floor((Maxvol-cur)/(Maxvol-Minvol)*(-2000)); 
+   SetVolume(cur);
+   document.onmousemove=null;
+  } 
+
+}
+
+
+function begindrag(Elm){
+  if (!document.all)
+    return
+  if (!isplaying)
+    return   
+  temp1=Elm.style.pixelLeft   
+  theImg=Elm
+  x=event.clientX;
+  document.onmousemove=move     
+}
+
+
+
+
+var Start, End;
+var seeking;
+seeking=false
+
+Start=136;
+End=214;
+
+
+function beginseek(Elm){
+  if (!document.all)
+    return
+  if (!isplaying)
+    return   
+  temp1=Elm.style.pixelLeft   
+  theImg=Elm
+  x=event.clientX;
+  seeking=true
+  document.onmousemove=moveseek     
+}
+
+function moveseek(){
+  if (event.button==1&&isplaying){
+    left=temp1+event.clientX-x
+      
+    if ((left<=End)&&(left>=Start))
+      theImg.style.pixelLeft=left
+     else 
+       if(left>End) 
+         theImg.style.pixelLeft=End
+         else
+           theImg.style.pixelLeft=Start 
+   // document.form1.pos.value=theImg.style.pixelLeft
+  return false
+  }
+}
+
+function enddragseek(){
+  
+ //这里设置时间搜索
+ if (isplaying){
+   movelen=GetLength()
+   cur=theImg.style.pixelLeft;
+   if (cur==End)
+     DoStop();
+   else{  
+     cur=Math.floor((cur-Start)*movelen/(End-Start)); 
+     SetPosition(cur);
+     seeking=false;
+     document.onmousemove=null;
+    } 
+  } 
+
+}
+
+function changeseek(){
+  if (eval(Player).PlayState!=2) return;
+  if (!history) return;
+  if (!seeking){
+    if (movelen==0)
+      movelen=GetLength();  
+    cur=GetPosition();
+    cur=Math.floor((End-Start)*cur/movelen);
+    //document.seek.style.pixelLeft=Start+cur;
+  }  
+  //alert(isplaying+''+history);
+  setTimeout("changeseek()",1000);
+    
+   //} 
+  
+  
+}
+
+function playhistory(src){
+  SetSource(src); 
+}
+function showchoose() 
+{ 
+ if (document.all.menu1.style.display=="none") 
+  document.all.menu1.style.display="block"; 
+  else 
+  {
+  playhistory(document.formdisco.getyy.value+document.formdisco.getmm.value+document.formdisco.getdd.value+".wmv")
+  document.all.menu1.style.display="none"; 
+  }
+} 
+
+//-->
+</SCRIPT>
+
+<SCRIPT language=JScript event="PlayStateChange(lOldState, lNewState)" 
+for=NSPlay>
+    if (lNewState==2){
+      movelen=GetLength();      
+      changeseek();
+    }      
+
+</SCRIPT>
+
+<SCRIPT language=JScript event=EndOfStream(lResult) for=NSPlay>
+    DoStop()    
+</SCRIPT>
+
+<STYLE type=text/css>#Layer1 {
+	Z-INDEX: 1; LEFT: 152px; WIDTH: 30px; POSITION: absolute; TOP: 73px; HEIGHT: 13px
+}
+</STYLE>
+<LINK href="live_files/music07css.css" type=text/css rel=stylesheet>
+<STYLE type=text/css>#Layer2 {
+	Z-INDEX: 1; LEFT: 99px; WIDTH: 150px; POSITION: absolute; TOP: 63px; HEIGHT: 15px
+}
+#Layer3 {
+	Z-INDEX: 2; LEFT: 200px; WIDTH: 38px; POSITION: absolute; TOP: 40px; HEIGHT: 14px
+}
+</STYLE>
+
+<META content="MSHTML 6.00.6000.16587" name=GENERATOR></HEAD>
+<BODY>
+<table class="tableBorder" cellSpacing=0 cellPadding=0 width=985 border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=top align=left width=82 rowSpan=3><IMG height=187 
+      src="live_files/music07homeqie_44.gif" width=82></TD>
+    <TD vAlign=top align=left width=161><IMG height=30 
+      src="live_files/music07homeqie_45.gif" width=161></TD>
+    <TD vAlign=top align=left rowSpan=3>
+      <table class="tableBorder" height=173 cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=top background=live_files/music07homeqie_47.gif>
+            <table class="tableBorder" cellSpacing=0 cellPadding=0 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD vAlign=top align=left width=115><A 
+                  href="javascript:playy('mms://10.1.1.30/jngushi',1)"><IMG 
+                  height=33 alt="" src="live_files/music07homeqie_46.gif" 
+                  width=115 border=0></A></TD>
+                <TD class=gray12t vAlign=bottom align=left width=558><A 
+                  class=gray12t 
+                  href="../tpjdlist.jsp?zbid=6&amp;ChannelNumber=wstp&amp;CatalogNumber=wstp0601&amp;ChannelID=1503&amp;tChannelID=0&amp;state=1" 
+                  target=_blank>《抬杠》</A><A class=gray12t 
+                  href="../tpjdlist.jsp?zbid=6&amp;ChannelNumber=wstp&amp;CatalogNumber=wstp0602&amp;ChannelID=1504&amp;tChannelID=0&amp;state=1" 
+                  target=_blank>《心理热线》</A><A class=gray12t 
+                  href="../tpjdlist.jsp?zbid=6&amp;ChannelNumber=wstp&amp;CatalogNumber=wstp0604&amp;ChannelID=1506&amp;tChannelID=0&amp;state=1" 
+                  target=_blank>《深夜故事无限听》</A><A class=gray12t 
+                  href="../tpjdlist.jsp?zbid=6&amp;ChannelNumber=wstp&amp;CatalogNumber=wstp0606&amp;ChannelID=1508&amp;tChannelID=0&amp;state=1" 
+                  target=_blank>《财富故事会》</A><A class=gray12t 
+                  href="../tpjdlist.jsp?zbid=6&amp;ChannelNumber=wstp&amp;CatalogNumber=wstp0610&amp;ChannelID=1512&amp;tChannelID=0&amp;state=1" 
+                  target=_blank>《武侠客栈》</A></TD></TR>
+              <TR>
+                <TD vAlign=top align=left width=115><A 
+                  href="javascript:playy('mms://210.77.193.6/wenyi',2)"><IMG 
+                  height=25 src="live_files/music07homeqie_52.gif" width=115 
+                  border=0></A></TD>
+                <TD class=gray12t align=left><A class=gray12t 
+                  href="../tpjdlist.jsp?zbid=2&amp;ChannelNumber=wstp&amp;CatalogNumber=wstp0203&amp;ChannelID=1175&amp;tChannelID=0&amp;state=1" 
+                  target=_blank>《劲爆正午十二点》</A><A class=gray12t 
+                  href="../tpjdlist.jsp?zbid=2&amp;ChannelNumber=wstp&amp;CatalogNumber=wstp0207&amp;ChannelID=1179&amp;tChannelID=0&amp;state=1" 
+                  target=_blank>《健康夜话》</A><A class=gray12t 
+                  href="../tpjdlist.jsp?zbid=2&amp;ChannelNumber=wstp&amp;CatalogNumber=wstp0214&amp;ChannelID=1397&amp;tChannelID=0&amp;state=1" 
+                  target=_blank>《聆听老歌》</A><A class=gray12t 
+                  href="../tpjdlist.jsp?zbid=2&amp;ChannelNumber=wstp&amp;CatalogNumber=wstp0215&amp;ChannelID=1398&amp;tChannelID=0&amp;state=1" 
+                  target=_blank>《精彩相声30分》</A><A class=gray12t 
+                  href="../tpjdlist.jsp?zbid=2&amp;ChannelNumber=wstp&amp;CatalogNumber=wstp0218&amp;ChannelID=1401&amp;tChannelID=0&amp;state=1" 
+                  target=_blank>《夜短情长》</A><A class=gray12t 
+                  href="../tpjdlist.jsp?zbid=2&amp;ChannelNumber=wstp&amp;CatalogNumber=wstp0205&amp;ChannelID=1177&amp;tChannelID=0&amp;state=1" 
+                  target=_blank>《娱人制造》</A></TD></TR>
+              <TR>
+                <TD vAlign=top align=left width=115><A 
+                  href="javascript:playy('mms://210.77.193.6/jiaotong',3)"><IMG 
+                  height=25 src="live_files/music07homeqie_53.gif" width=115 
+                  border=0></A></TD>
+                <TD class=gray12t align=left><A class=gray12t 
+                  href="../tpjdlist.jsp?zbid=4&amp;ChannelNumber=wstp&amp;CatalogNumber=wstp0402&amp;ChannelID=1181&amp;tChannelID=0&amp;state=1" 
+                  target=_blank>《SUNNY放轻松》</A><A class=gray12t 
+                  href="../tpjdlist.jsp?zbid=4&amp;ChannelNumber=wstp&amp;CatalogNumber=wstp0410&amp;ChannelID=1383&amp;tChannelID=0&amp;state=1" 
+                  target=_blank>《百家讲坛》</A><A class=gray12t 
+                  href="../tpjdlist.jsp?zbid=4&amp;ChannelNumber=wstp&amp;CatalogNumber=wstp0406&amp;ChannelID=1185&amp;tChannelID=0&amp;state=1" 
+                  target=_blank>《夜沙龙》</A><A class=gray12t 
+                  href="../tpjdlist.jsp?zbid=4&amp;ChannelNumber=wstp&amp;CatalogNumber=wstp0421&amp;ChannelID=1690&amp;tChannelID=0&amp;state=1" 
+                  target=_blank>《小罗罗崩没根》</A><A class=gray12t 
+                  href="../tpjdlist.jsp?zbid=4&amp;ChannelNumber=wstp&amp;CatalogNumber=wstp0408&amp;ChannelID=1187&amp;tChannelID=0&amp;state=1" 
+                  target=_blank>《深夜故事》</A></TD></TR>
+              <TR>
+                <TD vAlign=top align=left width=115><A 
+                  href="javascript:playy('mms://210.77.193.6/news',4)"><IMG 
+                  height=25 src="live_files/music07homeqie_54.gif" width=115 
+                  border=0></A></TD>
+                <TD class=gray12t align=left><A class=gray12t 
+                  href="../tpjdlist.jsp?zbid=3&amp;ChannelNumber=wstp&amp;CatalogNumber=wstp0315&amp;ChannelID=1828&amp;tChannelID=0&amp;state=1" 
+                  target=_blank>《新闻60》</A><A class=gray12t 
+                  href="../tpjdlist.jsp?zbid=3&amp;ChannelNumber=wstp&amp;CatalogNumber=wstp0316&amp;ChannelID=1829&amp;tChannelID=0&amp;state=1" 
+                  target=_blank>《女人花》</A><A class=gray12t 
+                  href="../tpjdlist.jsp?zbid=3&amp;ChannelNumber=wstp&amp;CatalogNumber=wstp0318&amp;ChannelID=1831&amp;tChannelID=0&amp;state=1" 
+                  target=_blank>《美食乐翻天》</A><A class=gray12t 
+                  href="../tpjdlist.jsp?zbid=3&amp;ChannelNumber=wstp&amp;CatalogNumber=wstp0307&amp;ChannelID=1221&amp;tChannelID=0&amp;state=1" 
+                  target=_blank>《金山夜话(1)》</A><A class=gray12t 
+                  href="../tpjdlist.jsp?zbid=3&amp;ChannelNumber=wstp&amp;CatalogNumber=wstp0314&amp;ChannelID=1404&amp;tChannelID=0&amp;state=1" 
+                  target=_blank>《金山夜话(2)》</A><SPAN class=gray12t><A 
+                  class=gray12t 
+                  href="../tpjdlist.jsp?zbid=3&amp;ChannelNumber=wstp&amp;CatalogNumber=wstp0317&amp;ChannelID=1830&amp;tChannelID=0&amp;state=1" 
+                  target=_blank>《夕阳红》</A></SPAN></TD></TR>
+              <TR>
+                <TD vAlign=top align=left width=115><A 
+                  href="javascript:playy('mms://210.77.193.6/jingji',5)"><IMG 
+                  height=25 src="live_files/music07homeqie_55.gif" width=115 
+                  border=0></A></TD>
+                <TD class=gray12t align=left>
+                  <DIV align=left><A class=gray12t href="../tpjdlist.jsp" 
+                  target=_blank>《流行小说城》</A><A class=gray12t 
+                  href="../tpjdlist.jsp" target=_blank>《刘成故事》</A><A 
+                  class=gray12t href="../tpjdlist.jsp" 
+                  target=_blank>《四点有话说》</A><A class=gray12t 
+                  href="../tpjdlist.jsp" target=_blank>《含笑时间》</A><A 
+                  class=gray12t href="../tpjdlist.jsp" 
+                  target=_blank>《夜色阑珊》</A><A class=gray12t 
+                  href="../tpjdlist.jsp" 
+              target=_blank>《消费监督台》</A></DIV></TD></TR>
+              <TR>
+                <TD vAlign=top align=left width=115><A 
+                  href="javascript:playy('mms://210.77.193.6/music1',6)"><IMG 
+                  height=40 src="live_files/music07homeqie_56.gif" width=115 
+                  border=0></A></TD>
+                <TD class=gray12t vAlign=top align=left><A class=gray12t 
+                  href="../tpjdlist.jsp?zbid=1&amp;ChannelNumber=wstp&amp;CatalogNumber=wstp0102&amp;ChannelID=1188&amp;tChannelID=0&amp;state=1" 
+                  target=_blank>《城市 Morning Call》</A><A class=gray12t 
+                  href="../tpjdlist.jsp?zbid=1&amp;ChannelNumber=wstp&amp;CatalogNumber=wstp0103&amp;ChannelID=1189&amp;tChannelID=0&amp;state=1" 
+                  target=_blank>《Music 伴你行》</A><A class=gray12t 
+                  href="../tpjdlist.jsp?zbid=1&amp;ChannelNumber=wstp&amp;CatalogNumber=wstp0104&amp;ChannelID=1190&amp;tChannelID=0&amp;state=1" 
+                  target=_blank>《音乐快车道》</A><A class=gray12t 
+                  href="../tpjdlist.jsp?zbid=1&amp;ChannelNumber=wstp&amp;CatalogNumber=wstp0105&amp;ChannelID=1191&amp;tChannelID=0&amp;state=1" 
+                  target=_blank>《音乐咖啡馆》</A><A class=gray12t 
+                  href="../tpjdlist.jsp?zbid=1&amp;ChannelNumber=wstp&amp;CatalogNumber=wstp0107&amp;ChannelID=1193&amp;tChannelID=0&amp;state=1" 
+                  target=_blank>《音乐超转速》</A></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD>
+    <TD vAlign=top align=right width=69 rowSpan=3><IMG height=173 
+      src="live_files/music07homeqie_49.gif" width=69></TD></TR>
+  <TR>
+    <TD vAlign=top align=left width=161><IMG height=116 
+      src="live_files/music07homeqie_51.gif" width=161 useMap=#Map 
+  border=0></TD></TR>
+  <TR>
+    <TD vAlign=top align=left width=161 height=41><IMG height=41 
+      src="live_files/music07homeqie_57.gif" width=161></TD></TR></TBODY></TABLE>
+<table class="tableBorder" style="DISPLAY: none" width="90%" border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <OBJECT id=NSPlay 
+      style="BORDER-RIGHT: #000000 1px solid; BORDER-TOP: #000000 1px solid; BORDER-LEFT: #000000 1px solid; BORDER-BOTTOM: #000000 1px solid" 
+      codeBase=http://activex.microsoft.com/activex/controls/mplayer/en/nsmp2inf.cab#Version=5,1,52,701 
+      type=application/x-oleobject height=250 
+      standby="加载 Microsoft Windows Media Player 组件..." width=335 border=1 
+      classid=CLSID:6BF52A52-394A-11d3-B153-00C04F79FAA6 VIEWASTEXT><PARAM NAME="autoStart" VALUE="0"><PARAM NAME="Balance" VALUE="0"><PARAM NAME="enabled" VALUE="1"><PARAM NAME="EnableContextMenu" VALUE="0"><PARAM NAME="url" VALUE=""><PARAM NAME="PlayCount" VALUE="1"><PARAM NAME="rate" VALUE="1.0"><PARAM NAME="currentPosition" VALUE="0"><PARAM NAME="currentMarker" VALUE="0"><PARAM NAME="defaultFrame" VALUE="-1"><PARAM NAME="invokeURLs" VALUE="0"><PARAM NAME="baseURL" VALUE=""><PARAM NAME="stretchToFit" VALUE="0"><PARAM NAME="volume" VALUE="80"><PARAM NAME="mute" VALUE="0"><PARAM NAME="uiMode" VALUE="none"><PARAM NAME="windowlessVideo" VALUE="-1"><PARAM NAME="fullScreen" VALUE="0"><PARAM NAME="enableErrorDialogs" VALUE="-1"><PARAM NAME="SAMIStyle" VALUE=""><PARAM NAME="SAMILang" VALUE=""><PARAM NAME="SAMIFilename" VALUE="">
+                                                                                 
+                                                                                 
+             <embed         type="application/x-mplayer2"        
+      pluginspage="http://www.microsoft.com/Windows/Downloads/Contents/Products/MediaPlayer/" 
+             filename src        autostart="false" enablecontextmenu="true"      
+       			      clicktoplay="true"         enablepositioncontrols="true"         
+                                     showcontrols="1"       showstatusbar="1"    
+                                          showdisplay="1"                      
+      width="380"       height="290">              </embed>         
+  </OBJECT></TD></TR>
+  <SCRIPT language=JavaScript>
+cur=Math.floor((Maxvol-cur)/(Maxvol-Minvol)*(-2000));  
+SetVolume(cur); 
+playfile='mms://210.77.193.6/music1'; 
+var filename='mms://210.77.193.6/music1'
+//if (playfile!=''){ 
+ // SetSource(filename); 
+//} 
+</SCRIPT>
+  </TBODY></TABLE>
+<DIV id=Layer2 style="FONT-SIZE: 12px">
+<MARQUEE scrollAmount=2 scrollDelay=70><SPAN id=item 
+style="COLOR: #333333">您现在收听的是 Music 88.7</SPAN></MARQUEE></DIV>
+<DIV id=Layer3 style="FONT-SIZE: 12px; text-shadow: #000066"><SPAN id=st>
+<P style="COLOR: #666633">暂停中</P></SPAN></DIV><MAP name=Map><AREA shape=CIRCLE 
+  coords=59,73,13 href="javascript:doPlay()"><AREA shape=CIRCLE coords=97,75,11 
+  href="javascript:DoStop()"></MAP></BODY></HTML>

@@ -1,0 +1,55 @@
+body { background:#8DDFFB; font-size: 12px; margin-top:0px;
+SCROLLBAR-FACE-COLOR: #009ace; SCROLLBAR-HIGHLIGHT-COLOR: #ffffff; 
+SCROLLBAR-SHADOW-COLOR: #ffffff; SCROLLBAR-DARKSHADOW-COLOR: #009ace; 
+SCROLLBAR-3DLIGHT-COLOR: #009ace; SCROLLBAR-ARROW-COLOR: #def0fa;
+SCROLLBAR-TRACK-COLOR: #def0fa;
+}
+TD {
+	FONT-SIZE: 12px
+}
+INPUT {
+	FONT-SIZE: 12px;
+	HEIGHT: 20px;
+}
+
+Button
+{
+	FONT-SIZE: 9pt;
+	HEIGHT: 20px; 
+}
+Select
+{
+	FONT-SIZE: 9pt;
+	HEIGHT: 20px;
+}
+A
+{
+	TEXT-DECORATION: none;
+	color: #000000;
+
+}
+A:hover
+{
+	COLOR: #428EFF;
+	text-decoration: underline;
+
+}
+th
+{
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; BACKGROUND-COLOR: #009ace; Height: 20; COLOR: white; 
+}
+.title
+{
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; BACKGROUND-COLOR: #009ace; Height: 20; COLOR: white; 
+}
+.title2
+{
+	PADDING-RIGHT: 3px; PADDING-LEFT: 3px; BACKGROUND-IMAGE: url(../Images/admin_title2.gif); PADDING-BOTTOM: 3px; PADDING-TOP: 3px
+}
+.border
+{
+	BORDER-RIGHT: #009ace 1px solid; BORDER-TOP: #009ace 1px solid; BORDER-LEFT: #009ace 1px solid; WIDTH: 99%; BORDER-BOTTOM: #009ace 1px solid; BACKGROUND-COLOR: #ffffff
+}
+.tdbg{
+	PADDING-RIGHT: 3px; PADDING-LEFT: 3px; BACKGROUND: #def0fa; PADDING-BOTTOM: 3px; PADDING-TOP: 3px
+}

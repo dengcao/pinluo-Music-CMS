@@ -1,0 +1,89 @@
+TD {
+	COLOR: #000000; 
+	font-family: "Verdana";
+	FONT-SIZE: 9pt
+}
+A:visited {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A:link {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #A4373C; TEXT-DECORATION: none
+}
+
+td, p, li, select, input, textarea {font-size:12px}
+.f12{font-size:12px}
+.f14{font-size:14px}
+.l12{line-height:120%}
+.l13{line-height:130%}
+.l15{line-height:150%}
+.l17{line-height:170%}
+.l20{line-height:210%}
+.img01{border-color:#000000}
+.img02{border-color:#ffffff}
+.c01{color:#ffffff;}
+.f7{color:#0b0096;font-size:7px}
+.c02{color:#0b0096;line-height:180%}
+
+A:hover {color:#ff0000;}
+
+a.title1, a.title1:hover {font-size:17px;font-family:arial;font-weight:bold;text-decoration:none;color:#000000}
+a.title2:link, a.title2:visited {text-decoration:none;color:#000000;}
+a.title2:active, a.title2:hover {text-decoration:none;color:#ff0000;}
+a.sinatail:link, a.sinatail:visited {text-decoration:underline;color:#0000ff;font-size:12px}
+a.sinatail:active, a.sinatail:hover {text-decoration:underline;color:#ff0000;font-size:12px}
+
+A.titleup:link {color:navy;text-decoration:underline;line-height:150%}
+A.titleup:visited {color:navy;text-decoration:underline;line-height:150%}
+a.titleup:active, a.titleup:hover {text-decoration:none;color:red;line-height:150%}
+
+A.title02:link {text-decoration:none;color:#ffffff}
+A.title02:visited {text-decoration:none;color:#ffffff}
+A.title02:active,
+A.title02:hover {text-decoration:underline;color:#cccccc}
+
+A.a01:link {text-decoration:none;color:#000071}
+A.a01:visited {text-decoration:none;color:#000071}
+a.a01:active, a.a01:hover {text-decoration:underline;color:#ff0000}
+
+A.a02:link {text-decoration:none;color:#000000}
+A.a02:visited {text-decoration:none;color:#000000}
+A.a02:active,
+A.a02:hover {text-decoration:underline;color:#666666}
+
+A.a03:link {text-decoration:none;color:#ff0000}
+A.a03:visited {text-decoration:none;color:#ff0000}
+A.a03:active,
+A.a03:hover {text-decoration:underline;color:#0000AA}
+
+A.a04:link {text-decoration:none;color:#0000ff}
+A.a04:visited {text-decoration:none;color:#0000ff}
+A.a04:active,
+A.a04:hover {text-decoration:underline;color:#0000AA}
+
+
+A.a06:link{text-decoration:underline;color:#0b0096}
+A.a06:visited {text-decoration:underline;color:#888888;}
+a.a06:active, a.a06:hover {text-decoration:underline;color:#0600ff}
+
+A.a07:link{text-decoration:underline;color:#0b0096}
+A.a07:visited {text-decoration:underline;color:#0b0096;}
+a.a07:active, a.a06:hover {text-decoration:underline;color:#0600ff}
+
+A.a06a:link{text-decoration:none;color:#0b0096}
+A.a06a:visited {text-decoration:none;color:#888888;}
+a.a06a:active, a.a06a:hover {text-decoration:underline;color:#0600ff}
+
+a.path:link, a.path:visited {text-decoration:none;color:#CCCCCC}
+a.path:active, a.path:hover {text-decoration:none;color:#ffffff}
+body {
+	margin-top: 5px;
+}
+INPUT {BORDER-BOTTOM-COLOR: #cccccc; BORDER-BOTTOM-WIDTH: 1px; BORDER-LEFT-COLOR: #cccccc; BORDER-LEFT-WIDTH: 1px; BORDER-RIGHT-COLOR: #cccccc; BORDER-RIGHT-WIDTH: 1px; BORDER-TOP-COLOR: #cccccc; BORDER-TOP-WIDTH: 1px; FONT-SIZE: 9pt; HEIGHT: 18px; PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px; PADDING-TOP: 1px}
+.line-bg {
+	background-image: url('/img/line_bg.gif');
+	background-repeat: repeat-x;
+	background-position-y:bottom;
+}

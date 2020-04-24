@@ -1,0 +1,89 @@
+A  { font:normal 12px 宋体; color:#111111; text-decoration:none; }
+A:hover  { color:#596099;text-decoration:underline; }
+A.meun  { font:normal 12px 宋体; color:red; text-decoration:none; }
+A.meun:hover  { color:#A3A3A3; TEXT-DECORATION: underline}
+
+body 
+{
+	FONT-SIZE: 12px;
+	COLOR: #000000;
+	FONT-FAMILY: 宋体;
+	background-color: #DADAE9; 
+	scrollbar-face-color: #EAEAF2;
+        scrollbar-highlight-color: #FFFFFF;
+        scrollbar-shadow-color: #9395C0;
+        scrollbar-3dlight-color: #F3F3F8;
+        scrollbar-arrow-color: #9395C0;
+        scrollbar-track-color: #F3F3F8;
+        scrollbar-darkshadow-color: #F3F3F8;
+        background-image: url(images/admin_bg.gif);
+}
+TD{
+font-family:宋体; font-size: 12px; line-height: 15px; LINE-HEIGHT: 150%
+}
+td.forumHeaderBackgroundAlternate
+{
+    background-color: #9395C0;
+	color:#FFFFFF
+}
+A.TableTitleLink {
+	COLOR: #FFFFFF;
+	TEXT-DECORATION: none;
+}
+A.TableTitleLink:hover {
+	COLOR: #FFFFFF;
+	TEXT-DECORATION: underline;}
+td.Border1
+{
+    background-color:#F3F3FA;
+}
+td.forumRow
+{
+    background-color:#F3F3FA;
+}
+
+td.forumRowHighlight
+{
+    background-color: #EAEAF3;
+}
+.tableBorder
+{
+    border: 1px #B1B4D1 solid ; 
+    background-color: #FFFFFF;
+    font: 12px
+}
+th
+{
+    background-image: url(images/admin_bg_1.gif);
+    background-color: #B1B4D1;
+    color: white;
+    font-size: 12px;
+    font-weight:bold;
+    height: 25
+}
+input,select,Textarea{
+font-family:Verdana, Arial, Helvetica, sans-serif,宋体; font-size: 12px;}
+}
+td.TableBody1
+{
+background-color: #F3F3FA;
+}
+.tableBorder1
+{
+background-color: #F3F3FA; 
+border: 1px solid #B1B4D1;
+}
+.button { 
+background-image:url(images/bbk.gif);
+background-color:#ffffff;
+height=20;
+font-size:12px;
+border:#666666 1px solid
+}
+.buttonmain { 
+background-image:url(images/bbk_main.gif);
+background-color:#ffffff;
+height=22;
+font-size:12px;
+border:#585A67 1px solid
+}
