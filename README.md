@@ -7,9 +7,7 @@
 本系统开发于2008年3月，现在开源出来，希望能帮到有需要的人。
 
 支持本程序，请到Gitee和GitHub给我们点Star！
-
 Gitee：https://gitee.com/caozha/pinluo-Music-CMS
-
 GitHub：https://github.com/cao-zha/pinluo-Music-CMS
 
 ### 安装方法
