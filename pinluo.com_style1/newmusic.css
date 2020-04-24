@@ -1,0 +1,39 @@
+.input {
+	FONT-SIZE: 12px; COLOR: #000000
+}
+.white {
+	FONT-SIZE: 12px; COLOR: #ffffff; TEXT-DECORATION: none
+}
+.bg {
+	BACKGROUND-IMAGE: url(images/music/music_7.jpg)
+}
+.txt {
+	FONT-SIZE: 12px; COLOR: #000000; TEXT-DECORATION: none
+}
+.gray {
+	FONT-SIZE: 12px; COLOR: #585858; TEXT-DECORATION: none
+}
+.green {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #004346; TEXT-DECORATION: none
+}
+.red {
+	FONT-SIZE: 12px; COLOR: #cf1cab; TEXT-DECORATION: none
+}
+.nenlv {
+	FONT-SIZE: 12px; COLOR: #749b00; TEXT-DECORATION: none
+}
+.blue {
+	FONT-SIZE: 12px; COLOR: #01b5bd; TEXT-DECORATION: none
+}
+.fuyan {
+	FONT-SIZE: 12px; COLOR: #d98d3c; TEXT-DECORATION: none
+}
+.white1 {
+	FONT-WEIGHT: bold; FONT-SIZE: 13px; COLOR: #ffffff; TEXT-DECORATION: none
+}
+FORM {
+	MARGIN: 0px
+}
+* {
+	FONT-SIZE: 12px
+}
