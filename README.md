@@ -52,3 +52,27 @@ strSQLDBName = "pinluomusic222"                '数据库名称
 
 域名空间：品络 www.pinluo.com
 
+
+
+
+### 界面预览
+![输入图片说明](https://images.gitee.com/uploads/images/2020/0424/212214_ad44b7f9_7397417.png "首页.png")
+
+![输入图片说明](https://images.gitee.com/uploads/images/2020/0424/212228_c222cb25_7397417.png "首页2.png")
+
+![输入图片说明](https://images.gitee.com/uploads/images/2020/0424/212246_d60de705_7397417.png "专辑页.png")
+
+![输入图片说明](https://images.gitee.com/uploads/images/2020/0424/212259_83ecf103_7397417.png "歌手列表页.png")
+
+![输入图片说明](https://images.gitee.com/uploads/images/2020/0424/212307_4d55e154_7397417.png "播放页.png")
+
+![输入图片说明](https://images.gitee.com/uploads/images/2020/0424/212318_23191d69_7397417.png "后台首页.png")
+
+![输入图片说明](https://images.gitee.com/uploads/images/2020/0424/212332_2df4cfc3_7397417.png "专辑管理.png")
+
+![输入图片说明](https://images.gitee.com/uploads/images/2020/0424/212342_13491494_7397417.png "歌曲管理.png")
+
+![输入图片说明](https://images.gitee.com/uploads/images/2020/0424/212354_93973969_7397417.png "会员管理.png")
+
+![输入图片说明](https://images.gitee.com/uploads/images/2020/0424/212408_bff7feb8_7397417.png "评论管理.png")
+
