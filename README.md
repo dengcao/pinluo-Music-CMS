@@ -52,6 +52,7 @@ strSQLDBName = "pinluomusic222"                '数据库名称
 
 域名空间：品络 www.pinluo.com
 
+优惠券：琼店 www.qiongdian.com
 
 
 
