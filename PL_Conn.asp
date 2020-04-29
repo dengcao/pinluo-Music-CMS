@@ -23,7 +23,7 @@ conn.open connstr
 '★                                                                   ★
 '☆     程序制作: 草札  www.caozha.com                                  ☆
 '★                                                                   ★
-'☆     优惠券: 琼店  www.qiongdian.com                                  ☆
+'☆     优惠券: 穷店  www.qiongdian.com                                  ☆
 '★                                                                   ★
 '★     源码基于Apache-2.0免费开源，请保留声明和链接！                      ★
 '☆                                                                   ☆
