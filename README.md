@@ -1,4 +1,4 @@
-﻿# 品络音乐程序系统 v1.0 完整版（MSSQL版）
+# 品络音乐程序系统 v1.0 完整版（MSSQL版）
 
 本系统拥有完整的音乐网站功能，可以帮助您快速建立一个功能全面的本地音乐网站。源码开源免费，使用时请保留版权标识，可用于商业，无任何限制。
 
@@ -52,7 +52,7 @@ strSQLDBName = "pinluomusic222"                '数据库名称
 
 域名空间：品络 www.pinluo.com
 
-优惠券：琼店 www.qiongdian.com
+优惠券：穷店 www.qiongdian.com
 
 
 
