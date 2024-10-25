@@ -8,9 +8,9 @@
 
 支持本程序，请到Gitee和GitHub给我们点Star！
 
-Gitee：https://gitee.com/caozha/pinluo-Music-CMS
+Gitee：https://gitee.com/dengzhenhua/pinluo-Music-CMS
 
-GitHub：https://github.com/cao-zha/pinluo-Music-CMS
+GitHub：https://github.com/dengcao/pinluo-Music-CMS
 
 ### 安装方法
 
@@ -46,13 +46,12 @@ strSQLDBName = "pinluomusic222"                '数据库名称
 
 本程序为v1.0完整版（MSSQL版），如需要使用ACCESS版，请到仓库的ACCESS分支下载。
 
-### 版权所有
 
-开发者：草札 www.caozha.com
+### 关于
 
-域名空间：品络 www.pinluo.com
+开发：[邓草博客 blog.5300.cn](http://blog.5300.cn)
 
-优惠券：穷店 www.qiongdian.com
+赞助：[品络互联 www.pinluo.com](http://www.pinluo.com)  &ensp;  [AI工具箱 5300.cn](http://5300.cn)  &ensp;  [汉语言文学网 hyywx.com](http://hyywx.com)  &ensp;  [雄马 xiongma.cn](http://xiongma.cn) &ensp;  [优惠券 tm.gs](http://tm.gs)
 
 
 
